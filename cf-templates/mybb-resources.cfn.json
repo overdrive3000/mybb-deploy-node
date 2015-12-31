@@ -178,6 +178,9 @@
     "RdsDbId": {
        "Value" : { "Ref" : "Database" }
     },
+		"RdsEndPoint": {
+			"Value": { "Fn::GetAtt": [ "Database", "Endpoint.Address" ] }
+		},
     "CacheEndpoint": { 
       "Value": { "Fn::GetAtt" : [ "CacheCluster", "ConfigurationEndpoint.Address" ]}
     },

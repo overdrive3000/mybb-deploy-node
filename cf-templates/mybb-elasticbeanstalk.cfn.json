@@ -7,6 +7,9 @@
     "RdsDbId": {
       "Type": "String"
     },
+		"RdsEndPoint": {
+			"Type": "String"
+		},
 		"AssetsBucketPrefix":{
 			"Type": "String"
 		},
@@ -159,6 +162,12 @@
             "Ref": "RdsDbId"
           }
         }, {
+					"Namespace": "aws:elasticbeanstalk:application:environment",
+					"OptionName": "MYBB_RDS_ENDPOINT",
+					"Value": {
+						"Ref": "RdsEndPoint"
+					}
+				}, {
           "Namespace": "aws:elasticbeanstalk:application:environment",
           "OptionName": "MYBB_RDS_DATABASE",
           "Value": {
