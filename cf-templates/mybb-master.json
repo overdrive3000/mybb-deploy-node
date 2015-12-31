@@ -107,7 +107,11 @@
       "Description": "The name of the Elastic Beanstalk Application",
       "Type": "String",
       "Default": "MyBB-Forum"
-    }
+    },
+		"DeveloperName": {
+			"Description": "The name of the developer or environment stage",
+			"Type": "String",
+			"Default": "jmesa-unique-id"
   },
 
   "Resources": {
@@ -150,6 +154,7 @@
           "CacheEndpoint"          : { "Fn::GetAtt" : [ "AppResources", "Outputs.CacheEndpoint" ]},
           "CachePort"              : { "Fn::GetAtt" : [ "AppResources", "Outputs.CachePort" ]},
           "AppBucket"              : { "Fn::GetAtt" : [ "AppResources", "Outputs.AppBucket" ]},
+					"CNAMEPrefix"						 : { "Fn::Join" : ["-", [{ "Ref": "ApplicationName" }, {"Ref": "DeveloperName"}]] }
           "DatabaseName"     : { "Ref" : "DatabaseName"},
           "DatabaseUser"     : { "Ref" : "DatabaseUser"},
           "DatabasePassword" : { "Ref" : "DatabasePassword" },

@@ -54,8 +54,7 @@
       "Default": "Dev-VPC"
     },
 		"CNAMEPrefix": {
-			"Type": "String",
-			"Default": { "Fn::Join" : ["-", [{ "Ref": "ApplicationName" }, {"Ref": "DeveloperName"}]] }
+			"Type": "String"
 		},
     "InstanceSecurityGroup": {
       "Type": "String"
