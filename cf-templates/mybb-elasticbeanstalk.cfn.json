@@ -53,6 +53,10 @@
       "Type": "String",
       "Default": "Dev-VPC"
     },
+		"CNAMEPrefix": {
+			"Type": "String",
+			"Default": { "Fn::Join" : ["-", [{ "Ref": "ApplicationName" }, {"Ref": "DeveloperName"}]] }
+		},
     "InstanceSecurityGroup": {
       "Type": "String"
     },
@@ -152,6 +156,7 @@
       "Properties": {
         "ApplicationName": { "Ref": "Application"},
         "EnvironmentName" : { "Fn::Join" : ["-", [ { "Ref": "EnvironmentName" }, {"Ref": "DeveloperName"}]] },
+				"CNAMEPrefix": { "Fn::Join": ["", [ { "Ref": "CNAMEPrefix" }, ".elasticbeanstalk.com" ]] },
         "Description": "Default Environment",
         "VersionLabel": "Initial Version",
         "TemplateName": "DefaultConfiguration",
@@ -161,7 +166,11 @@
           "Value": {
             "Ref": "RdsDbId"
           }
-        }, {
+        },{
+					"Namespace": "aws:elasticbeanstalk:application:environment",
+					"OptionName": "MYBB_CNAME",
+					"Value": { "Fn::Join": ["", [ { "Ref": "CNAMEPrefix" }, ".elasticbeanstalk.com" ]] }
+				}, {
 					"Namespace": "aws:elasticbeanstalk:application:environment",
 					"OptionName": "MYBB_RDS_ENDPOINT",
 					"Value": {
