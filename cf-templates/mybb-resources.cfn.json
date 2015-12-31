@@ -49,6 +49,10 @@
   },
 
   "Resources": {
+		"AppBucket": {
+			"Type": "AWS::S3::Bucket"
+		},
+
     "CacheSubnetGroup" : {
         "Type" : "AWS::ElastiCache::SubnetGroup",
         "Properties" : {
@@ -180,6 +184,9 @@
     "CachePort": { 
       "Value" : {"Fn::GetAtt" : [ "CacheCluster", "ConfigurationEndpoint.Port" ]}
     },
+		"AppBucket": {
+			"Value": { "Ref": "AppBucket" }
+		},
     "DatabaseUser":{
       "Value": { "Ref" : "DatabaseUser"}
     },
