@@ -155,7 +155,7 @@
       "Properties": {
         "ApplicationName": { "Ref": "Application"},
         "EnvironmentName" : { "Fn::Join" : ["-", [ { "Ref": "EnvironmentName" }, {"Ref": "DeveloperName"}]] },
-				"CNAMEPrefix": { "Fn::Join": ["", [ { "Ref": "CNAMEPrefix" }, ".elasticbeanstalk.com" ]] },
+				"CNAMEPrefix": { "Ref": "CNAMEPrefix"  },
         "Description": "Default Environment",
         "VersionLabel": "Initial Version",
         "TemplateName": "DefaultConfiguration",
