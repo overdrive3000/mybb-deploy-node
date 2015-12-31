@@ -7,6 +7,9 @@
     "RdsDbId": {
       "Type": "String"
     },
+		"AssetsBucketPrefix":{
+			"Type": "String"
+		},
 		"AppBucket": {
 			"Type": "String"
 		},
