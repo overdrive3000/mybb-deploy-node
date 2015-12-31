@@ -138,16 +138,8 @@
           "VersionLabel": "Initial Version",
           "Description": "Initial Version",
           "SourceBundle": {
-            "S3Bucket": {
-              "Fn::Join": ["", [{
-                "Ref": "AssetsBucketPrefix"
-              }, {
-                "Ref": "AWS::Region"
-              }]]
-            },
-            "S3Key": {
-              "Ref": "ZipKey"
-            }
+            "S3Bucket": { "Ref": "AssetsBucketPrefix" },
+						"S3Key": { "Ref": "ZipKey" }
           }
         }]
       }
