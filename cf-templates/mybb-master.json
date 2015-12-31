@@ -92,7 +92,7 @@
       "Type": "String",
       "Default" : "jmesa-crossover-deployment"
     },
-    "WarKey": {
+    "ZipKey": {
       "Description": "The key of the application ZIP file in the App Bundle Bucket",
       "Type": "String",
       "Default": "ebs-app-bundle/mybb.zip"
@@ -157,7 +157,7 @@
           "DatabaseUser"     : { "Ref" : "DatabaseUser"},
           "DatabasePassword" : { "Ref" : "DatabasePassword" },
           "AssetsBucketPrefix"  : { "Ref" : "AssetsBucketPrefix" },
-          "WarKey"           : { "Ref" : "WarKey"},
+          "ZipKey"           : { "Ref" : "ZipKey"},
           "KeyName"          : { "Ref" : "KeyName" },
           "InstanceType"     : { "Ref" : "InstanceType"},
           "ApplicationName"  : { "Ref" : "ApplicationName" },
