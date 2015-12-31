@@ -146,6 +146,7 @@
         "TemplateURL" : { "Fn::Join" : ["", [ "http://s3.amazonaws.com/", { "Ref" : "AssetsBucketPrefix" }, "/", { "Ref" : "AppTemplateKey" }]]},
         "Parameters" : {
           "RdsDbId"                : { "Fn::GetAtt" : [ "AppResources", "Outputs.RdsDbId" ]},
+					"RdsEndPoint"						 : { "Fn::GetAtt" : [ "AppResources", "Outputs.RdsEndPoint" ]},
           "CacheEndpoint"          : { "Fn::GetAtt" : [ "AppResources", "Outputs.CacheEndpoint" ]},
           "CachePort"              : { "Fn::GetAtt" : [ "AppResources", "Outputs.CachePort" ]},
           "AppBucket"              : { "Fn::GetAtt" : [ "AppResources", "Outputs.AppBucket" ]},
