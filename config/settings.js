@@ -22,6 +22,7 @@ const dbUser              = 'admin'; // Database User
 const zipKey							= 'ebs-app-bundle/mybb.zip'; // ZIP bundle to be deployed in Elastic Beanstalk
 const developerName				= `jmesa-${timestamp}`;
 const environmentName			= 'production';
+const applicationName			= 'MyBB-Forum';
 
 
 export default {
@@ -35,5 +36,6 @@ export default {
   dbUser:								dbUser,
 	zipKey:								zipKey,
 	developerName:				developerName,
-	environmentName:			environmentName
+	environmentName:			environmentName,
+	applicationName:			applicationName
 }

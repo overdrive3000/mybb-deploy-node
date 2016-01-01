@@ -45,6 +45,10 @@ export default (templateURL) => new Promise((resolve, reject) => {
 				ParameterValue: settings.developerName
 			},
 			{
+				ParameterKey: 'ApplicationName',
+				ParameterValue: settings.applicationName
+			},
+			{
 				ParameterKey:	'EnvironmentName',
 				ParameterValue: settings.environmentName
 			}

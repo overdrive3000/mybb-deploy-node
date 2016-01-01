@@ -112,6 +112,11 @@
 			"Description": "The name of the developer or environment stage",
 			"Type": "String",
 			"Default": "jmesa-unique-id"
+		},
+		"EnvironmentName": {
+			"Description": "The name of the environment stage",
+			"Type": "String",
+			"Default": "staging"
 		}
   },
 
@@ -164,6 +169,7 @@
           "KeyName"          : { "Ref" : "KeyName" },
           "InstanceType"     : { "Ref" : "InstanceType"},
           "ApplicationName"  : { "Ref" : "ApplicationName" },
+          "EnvironmentName"  : { "Ref" : "EnvironmentName" },
           "InstanceSecurityGroup" : { "Fn::GetAtt" : ["VPCScaffold", "Outputs.InstanceSecurityGroup"] },
           "VPCId" : { "Fn::GetAtt" : ["VPCScaffold", "Outputs.VPCId"] },
           "PrivateSubnets" : {
