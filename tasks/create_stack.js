@@ -21,7 +21,7 @@ export default (templateURL) => new Promise((resolve, reject) => {
         ParameterValue: settings.vpcAvailabilityZone1
       },
       {
-        ParameterKey: 'VPCAvailabilityZone12',
+        ParameterKey: 'VPCAvailabilityZone2',
         ParameterValue: settings.vpcAvailabilityZone2
       },
       {
