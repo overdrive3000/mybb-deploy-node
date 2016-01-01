@@ -3,6 +3,7 @@
 # Update and install required packages
 yum update -y
 yum install -y git
+yum install -y mysql
 
 # Configure and clone git repository
 su - ec2-user -c "git clone https://github.com/overdrive3000/mybb-deploy-node.git /home/ec2-user/stack_deploy"
@@ -24,5 +25,8 @@ cd ..
 yum -y groupinstall "Development Tools"
 su - ec2-user -c "curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash"
 su - ec2-user -c "nvm install stable"
-# Change the following line with the right repo
+su - ec2-user -c "echo 'nvm use stable' >> /home/ec2-user/.bashrc"
 su - ec2-user -c "cd /home/ec2-user/stack_deploy; npm install; cd"
+
+# Get Controller Node PublicIP
+su - ec2-user -c "curl http://169.254.169.254/latest/meta-data/public-ipv4 > /home/ec2-user/.publicip"
