@@ -7,7 +7,7 @@ const projectRoot						= path.dirname(__dirname);
 // Basic configuration
 const keyName								= 'overdrive'; // SSH Key Pair to use
 const stackName							= 'MyBBForum'; // Stack Name
-const templateURL						= 'https://s3.amazonaws.com/jmesa-crossover-deployment/cf-templates/mybb-master.json'; // Master template URL
+const templateURL						= 'https://s3.amazonaws.com/jmesa-crossover-deployment-01/cf-templates/mybb-master.json'; // Master template URL
 
 // VPC configuration
 const vpcAvailabilityZone1	= 'us-west-2a';
