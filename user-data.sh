@@ -8,7 +8,7 @@ yum install -y git
 
 # Configure and clone git repository
 su - ec2-user -c "git clone https://github.com/overdrive3000/mybb-deploy-node.git /home/ec2-user/stack_deploy"
-su - ec2-user -c  "git clone https://github.com/overdrive3000/mybb-deploy-node.git /home/ec2-user/mybb"
+su - ec2-user -c  "git clone https://github.com/overdrive3000/mybb.git /home/ec2-user/mybb"
 
 # Configure AWS Cli
 su - ec2-user -c "aws configure set region us-west-2"
