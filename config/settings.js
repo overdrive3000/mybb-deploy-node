@@ -15,7 +15,7 @@ const vpcAvailabilityZone2	= 'us-west-2c';
 
 // RDS database configuration
 const dbName              = 'mybb_db'; // Database Name
-const dbPassword          = 'nonsecure-password'; // Database Password
+const dbPassword          = 'nonsecurepassword'; // Database Password
 const dbUser              = 'admin'; // Database User
 
 // Elastic Beanstalk configuration
