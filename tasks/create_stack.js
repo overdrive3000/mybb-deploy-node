@@ -12,6 +12,10 @@ export default (templateURL) => new Promise((resolve, reject) => {
       'CAPABILITY_IAM'
     ],
     Parameters: [
+			{
+				ParameterKey: 'AssetsBucketPrefix',
+				ParameterValue: settings.assetsBucketPrefix
+			},
       {
         ParameterKey: 'KeyName',
         ParameterValue: settings.keyName
@@ -53,7 +57,7 @@ export default (templateURL) => new Promise((resolve, reject) => {
 				ParameterValue: settings.environmentName
 			}
     ],
-    TemplateURL: templateURL
+    TemplateURL: `https://s3.amazonaws.com/${settings.assetsBucketPrefix}/cf-templates/mybb-master.json`
   };
 
   cloudformation.createStack(params, function(err, data){
