@@ -10,9 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "archiver": "^0.15.1",
-    "async": "^1.4.2",
+    "async": "^1.5.0",
     "aws-sdk": "^2.2.2",
-    "babel": "^5.8.23",
+    "babel": "^5.8.34",
     "git-cli": "^0.8.3",
     "node-csv": "^0.1.2",
     "sleep": "^3.0.0",
