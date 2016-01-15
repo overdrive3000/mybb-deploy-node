@@ -185,7 +185,7 @@
           "PublicSubnets" : {
             "Fn::Join": [",", [{ "Fn::GetAtt" : ["VPCScaffold", "Outputs.PublicSubnet1"] }, { "Fn::GetAtt" : ["VPCScaffold", "Outputs.PublicSubnet2"] }]]
           },
-					"OperatorEmail": { "Ref": "OperatorEmail" }
+					"OperatorEMail": { "Ref": "OperatorEMail" }
         }
       }
     }
