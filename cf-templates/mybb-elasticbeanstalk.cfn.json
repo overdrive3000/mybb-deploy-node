@@ -111,8 +111,7 @@
           {
             "Namespace": "aws:ec2:vpc",
             "OptionName": "VPCId",
-            "Value": { "Ref": "VPCId"
-            }
+            "Value": { "Ref": "VPCId" }
           },
           {
             "Namespace": "aws:ec2:vpc",
@@ -162,9 +161,7 @@
         "OptionSettings": [{
           "Namespace": "aws:elasticbeanstalk:application:environment",
           "OptionName": "MYBB_RDS_INSTANCEID",
-          "Value": {
-            "Ref": "RdsDbId"
-          }
+          "Value": { "Ref": "RdsDbId" }
         },{
 					"Namespace": "aws:elasticbeanstalk:application:environment",
 					"OptionName": "MYBB_CNAME",
