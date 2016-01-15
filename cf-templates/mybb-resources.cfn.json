@@ -169,13 +169,7 @@
           "Ref": "DBSubnetGroup"
         }
       }
-    },
-		"NotificationTopic": {
-      "Type": "AWS::SNS::Topic",
-      "Properties": {
-        "Subscription": [ { "Endpoint": { "Ref": "OperatorEMail" }, "Protocol": "email" } ]
-      }
-		}
+    }
   },
   "Outputs": {
     "InstanceSecurityGroup": {

@@ -117,6 +117,13 @@
 			"Description": "The name of the environment stage",
 			"Type": "String",
 			"Default": "staging"
+		},
+		"OperatorEMail": {
+			"Description": "EMail address to notify CPU high workload",
+			"Type": "String",
+			"AllowedPattern": "([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)",
+			"ConstraintDescription": "must be a valid email address.",
+			"Default": "linuxven@gmail.com"
 		}
   },
 
@@ -177,7 +184,8 @@
           },
           "PublicSubnets" : {
             "Fn::Join": [",", [{ "Fn::GetAtt" : ["VPCScaffold", "Outputs.PublicSubnet1"] }, { "Fn::GetAtt" : ["VPCScaffold", "Outputs.PublicSubnet2"] }]]
-          }
+          },
+					"OperatorEmail": { "Ref": "OperatorEmail" }
         }
       }
     }

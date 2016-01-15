@@ -55,7 +55,10 @@ export default (templateURL) => new Promise((resolve, reject) => {
 			{
 				ParameterKey:	'EnvironmentName',
 				ParameterValue: settings.environmentName
-			}
+			},
+			{
+				ParameterKey: 'OperatorEMail',
+				ParameterValue: settings.operatorEMail
     ],
     TemplateURL: `https://s3.amazonaws.com/${settings.assetsBucketPrefix}/cf-templates/mybb-master.json`
   };

@@ -70,7 +70,14 @@
     "PrivateSubnets" : {
       "Type" : "String",
       "Description" : "A comma-delimited list of private VPC subnets. Auto Scaling and RDS will be launched into this subnet."
-    }
+    },
+		"OperatorEMail": {
+			"Description": "EMail address to notify CPU high workload",
+			"Type": "String",
+			"AllowedPattern": "([a-zA-Z0-9_\\-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)",
+			"ConstraintDescription": "must be a valid email address.",
+			"Default": "linuxven@gmail.com"
+		}
   },
 
   "Resources": {
@@ -159,6 +166,14 @@
         "VersionLabel": "Initial Version",
         "TemplateName": "DefaultConfiguration",
         "OptionSettings": [{
+					"Namespace": "aws:elasticbeanstalk:sns:topics",
+					"OptionName": "Notification Endpoint",
+					"Value": { "Ref": "OperatorEMail" }
+				},{
+					"Namespace": "aws:elasticbeanstalk:sns:topics",
+					"OptionName": "Notification Protocol",
+					"Value": "email"
+				},{
           "Namespace": "aws:elasticbeanstalk:application:environment",
           "OptionName": "MYBB_RDS_INSTANCEID",
           "Value": { "Ref": "RdsDbId" }

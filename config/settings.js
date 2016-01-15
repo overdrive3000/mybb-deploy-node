@@ -10,6 +10,9 @@ const stackName							= 'MyBBForum'; // Stack Name
 const templateURL						= 'https://s3.amazonaws.com/jmesa-crossover-deployment-01/cf-templates/mybb-master.json'; // Master template URL
 const assetsBucketPrefix		= 'jmesa-crossover-deployment';
 
+// SNS Topic Configuration
+const operatorEMail					= 'linuxven@gmail.com';
+
 // VPC configuration
 const vpcAvailabilityZone1	= 'us-west-2a';
 const vpcAvailabilityZone2	= 'us-west-2c';
@@ -31,6 +34,7 @@ export default {
   stackName:						stackName,
 	templateURL:					templateURL,
 	assetsBucketPrefix:		assetsBucketPrefix,
+	operatorEMail:				operatorEMail,
 	vpcAvailabilityZone1:	vpcAvailabilityZone1,
 	vpcAvailabilityZone2:	vpcAvailabilityZone2,
   dbName:								dbName,
