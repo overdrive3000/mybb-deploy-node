@@ -31,7 +31,6 @@ const applicationName     = 'MyBB-Forum';
 export default {
   keyName:              keyName,
   stackName:            stackName,
-  templateURL:          templateURL,
   assetsBucketPrefix:   assetsBucketPrefix,
   operatorEMail:        operatorEMail,
   vpcAvailabilityZone1: vpcAvailabilityZone1,
