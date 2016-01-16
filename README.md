@@ -52,12 +52,19 @@ const keyName				= 'overdrive';
 
 Cloudformation stack name
 ```
-const stackName				= 'MyBBForum'; // 
+const stackName				= 'MyBBForum'; 
 ```
 
 S3 bucket name where the main configration assets will be stored, remember you have to use an unique name for S3 buckets, it has to be the same name used in the user-data.sh script
 ```
 const assetsBucketPrefix		= 'jmesa-crossover-deployment';
+```
+
+#### SNS Configuration
+
+Email where notification will sent.
+```
+const operatorEMail			= 'linuxven@gmail.com';
 ```
 
 #### VPC configuration
