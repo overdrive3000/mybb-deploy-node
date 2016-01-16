@@ -7,7 +7,7 @@ const projectRoot						= path.dirname(__dirname);
 // Basic configuration
 const keyName								= 'overdrive'; // SSH Key Pair to use
 const stackName							= 'MyBBForum'; // Stack Name
-const templateURL						= 'https://s3.amazonaws.com/jmesa-crossover-deployment-01/cf-templates/mybb-master.json'; // Master template URL
+// const templateURL						= 'https://s3.amazonaws.com/jmesa-crossover-deployment-01/cf-templates/mybb-master.json'; // Master template URL
 const assetsBucketPrefix		= 'jmesa-crossover-deployment';
 
 // SNS Topic Configuration
